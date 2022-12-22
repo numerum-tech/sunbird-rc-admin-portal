@@ -5,9 +5,9 @@
         "clientId": "admin-portal",
         "realm": "sunbird-rc"
     },
-    "configFolder": "/assets/config",
-    "referanceSchema": "/assets/config",
-    "languageFolder": "/assets/i18n",
+    "configFolder": "/admin-ui/assets/config",
+    "referanceSchema": "/admin-ui/assets/config",
+    "languageFolder": "/admin-ui/assets/i18n",
     "title": "Admin Portal",
     "baseUrl": "https://sunbird-rc.sandbox.gouv.tg/registry/api/v1",
     "schemaUrl": "https://sunbird-rc.sandbox.gouv.tg/registry/api/docs/swagger.json",
