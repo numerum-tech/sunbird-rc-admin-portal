@@ -13,6 +13,7 @@ export class FormioJsonService {
 
   convertSchemaToFormioJson(viewSchemaField) {
     let newArr: any = [];
+    viewSchemaField = (viewSchemaField.length) ? viewSchemaField : (viewSchemaField.hasOwnProperty('propertyKey') ? viewSchemaField.data : viewSchemaField)
     for (let i = 0; i < viewSchemaField.length; i++) {
       if (viewSchemaField[i].type != 'object' && viewSchemaField[i].type != 'array') {
         let compJson = {
@@ -116,8 +117,18 @@ export class FormioJsonService {
 
             compJson.components.push(compJsonS);
           }else{
-            compJson.components.push(this.convertSchemaToFormioJson(fieldData.data[i]));
-            console.log('-----------------> ', compJson);
+            let compJsonS = {
+              "label": fieldData.propertyName,
+              "tableView": false,
+              "key": fieldData.propertyKey,
+              "type": "container",
+              "input": true,
+              "components": []
+            }
+
+            compJsonS.components = this.convertSchemaToFormioJson(fieldData.data[i]);
+
+            compJson.components.push(compJsonS);
           }
         }
 
@@ -126,6 +137,7 @@ export class FormioJsonService {
       }
 
     }
+
     return newArr;
 
   }

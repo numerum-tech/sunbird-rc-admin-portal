@@ -1,4 +1,4 @@
-RELEASE_VERSION = v0.0.5-beta
+RELEASE_VERSION = v0.0.7-beta
 build:
 	docker build -t dockerhub/sunbird-rc-admin-portal .
 
