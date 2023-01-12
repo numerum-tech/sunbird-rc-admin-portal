@@ -25,7 +25,6 @@ export class ConfigWorkflowComponent implements OnInit {
   fieldtype = ["String", "Boolean", "Number"]
   global_properties_student = [];
   global_tempName_student = "";
-  name = 'Angular';
   workflowForm: FormGroup;
   attestationForm: FormGroup;
   values = [];
@@ -97,7 +96,7 @@ export class ConfigWorkflowComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.patchValueData();
+   // this.patchValueData();
 
 
     this.entityName = this.activeRoute.snapshot.params.entity;
@@ -115,7 +114,7 @@ export class ConfigWorkflowComponent implements OnInit {
         selectedMenuList = this.fieldList.find((e) => e[this.entityName]);
       }
 
-      this.onChangeSelect(this.entityName);
+    //  this.onChangeSelect(this.entityName);
     });
   }
 

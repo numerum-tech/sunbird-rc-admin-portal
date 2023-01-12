@@ -225,7 +225,7 @@
     z-index: 2;
   }
   .zi-2000{
-    z-index: 2000;
+    z-index: 2000 !important;
   }
   
   /******************* Opacity ****************************************/
@@ -265,9 +265,6 @@
   }
   .mb-20{
     margin-bottom: 20px !important;
-  }
-  .border2 {
-    border: 1px solid #fff !important;
   }
   .border3{
     border: 1px solid rgba(0,0,0,.125);

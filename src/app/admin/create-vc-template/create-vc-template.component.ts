@@ -76,11 +76,11 @@ export class CreateVcTemplateComponent implements OnInit, OnChanges {
       if (this.params.hasOwnProperty('usecase')) {
         this.usecase = params.usecase;
         this.usecase = params.usecase;
-        if (this.usecase == 'issuance') {
+        if (this.usecase == 'vcmodule') {
           this.isShow1 = true;
           this.isShow2 = true;
         }
-        else if (this.usecase == 'atstandclaim') {
+        else if (this.usecase == 'attestmodule') {
           this.isShow1 = false;
           this.isShow2 = true;
         }
@@ -91,6 +91,8 @@ export class CreateVcTemplateComponent implements OnInit, OnChanges {
         else if (this.usecase == 'education') {
           this.isShow1 = true;
           this.isShow2 = false;
+        }else{
+          this.isShow1 = true;
         }
       }
 
@@ -157,7 +159,7 @@ export class CreateVcTemplateComponent implements OnInit, OnChanges {
 
 
   injectHTML() {
-    console.log(this.credTemp)
+
     setTimeout(() => {
       for (let i = 0; i < this.credTemp.length; i++) {
         let iframe: HTMLIFrameElement = document.getElementById('iframe' + i) as HTMLIFrameElement;
